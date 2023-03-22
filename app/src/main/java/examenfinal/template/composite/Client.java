@@ -14,9 +14,9 @@ public class Client {
         ciudad.add(urbanizacion3);
 
         Composite ciudad2 = new Composite(">>> ciudad2","50000bs");
-        ciudad.add(new Leaf("urb 4","20"));
-        ciudad.add(new Leaf("urb 5","20"));
-        ciudad.add(new Leaf("urb 6","20"));
+        ciudad2.add(new Leaf("urb 4","20"));
+        ciudad2.add(new Leaf("urb 5","20"));
+        ciudad2.add(new Leaf("urb 6","20"));
 
         Composite departamento = new Composite(">> dpt1","1");
         departamento.add(ciudad);
