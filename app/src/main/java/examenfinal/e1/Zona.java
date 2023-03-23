@@ -2,15 +2,18 @@ package examenfinal.e1;
 
 public class Zona extends COmponent{
 
-    public Zona(String nombre, int numeroHabitantes, int poa) {
-        super(nombre, numeroHabitantes, poa);
+    @Override
+    public String show() {
+        return "nombre:" +getNombre() + " numero de Habitantes: " + getNumeroHabitantes() + " poa:" + getPoa();
+    }
+
+    public Zona(String nombre,  int poa,int numeroHabitantes) {
+        super(nombre, poa);
     }
 
     @Override
     public void operation() {
-        System.out.println("nombre:" +getNombre());
-        System.out.println("numero de Habitantes: " + getNumeroHabitantes());
-        System.out.println("poa:" + getPoa());
+        Help.getInstance().add(this.show());
     }
 
     @Override
@@ -26,10 +29,5 @@ public class Zona extends COmponent{
 
     }
 
-    @Override
-    public COmponent get(int position) {
-        // no se pone nada
-        System.out.println("Este es el objeto simple no puede agregar a otros");
-        return null;
-    }
+    
 }

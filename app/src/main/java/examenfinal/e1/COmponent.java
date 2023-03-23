@@ -9,9 +9,8 @@ public abstract class COmponent {
 
    
 
-    public COmponent(String nombre, int numeroHabitantes, int poa) {
+    public COmponent(String nombre, int poa) {
         this.nombre = nombre;
-        this.numeroHabitantes = numeroHabitantes;
         this.poa = poa;
     }
     public String getNombre() {
@@ -35,5 +34,5 @@ public abstract class COmponent {
     public abstract void operation();
     public abstract void add(COmponent composite);
     public abstract void remove(COmponent composite);
-    public abstract COmponent get(int position);
+    public abstract String show();
 }

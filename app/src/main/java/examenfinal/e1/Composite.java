@@ -6,26 +6,22 @@ import java.util.List;
 public class Composite extends COmponent {
     private List<COmponent> componentList = new ArrayList<>();
 
-    public Composite(String nombre, int numeroHabitantes, int poa) {
+    public Composite(String nombre, int poa) {
         
-        super(nombre, numeroHabitantes, poa);
+        super(nombre, poa);
     }
 
     @Override
     public void operation() {
-        System.out.println("Composite>   nombre:" +getNombre());
-        System.out.println("Composite>    numero de Habitantes: " + getNumeroHabitantes());
-        System.out.println("Composite>    poa:" + getPoa());
         for (COmponent component:componentList) {
             component.operation();
+            this.setNumeroHabitantes(getNumeroHabitantes() + component.getNumeroHabitantes());
         }
+        Help.getInstance().show();
+
     }
 
 
-    @Override
-    public COmponent get(int position) {
-        return componentList.get(position);
-    }
 
     @Override
     public void add(COmponent composite) {
@@ -36,4 +32,12 @@ public class Composite extends COmponent {
     public void remove(COmponent composite) {
         componentList.remove(composite);
     }
+
+    @Override
+    public String show() {
+        
+        return "Nombre: " + getNombre()+" Numreo de habitantes: " + getNumeroHabitantes()+" Poa: " + getPoa() ;
+    }
+
+    
 }
