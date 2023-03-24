@@ -1,5 +1,5 @@
 package examenfinal.e3;
 
-public class ISocial {
-    
+public interface ISocial {
+    void integracion(IInscripciones inscripciones);
 }

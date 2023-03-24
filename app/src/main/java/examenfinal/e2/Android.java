@@ -3,17 +3,49 @@ package examenfinal.e2;
 public class Android implements ICelulara{
     private String modelo;
     private int precio;
-    private double androidVersion;
-    private int memoriaRam;
+    private double android;
+    private int ram;
     private String store;
     private int numeroChips;
     private double buildVersion;
 
-    public Android(String modelo, int precio, double androidVersion, int memoriaRam, String store, int numeroChips, double buildVersion) {
+    public double getAndroid() {
+        return android;
+    }
+
+    public void setAndroid(double android) {
+        this.android = android;
+    }
+
+    public String getStore() {
+        return store;
+    }
+
+    public void setStore(String store) {
+        this.store = store;
+    }
+
+    public int getNumeroChips() {
+        return numeroChips;
+    }
+
+    public void setNumeroChips(int numeroChips) {
+        this.numeroChips = numeroChips;
+    }
+
+    public double getBuildVersion() {
+        return buildVersion;
+    }
+
+    public void setBuildVersion(double buildVersion) {
+        this.buildVersion = buildVersion;
+    }
+
+    public Android(String modelo, int precio, double android, int ram, String store, int numeroChips, double buildVersion) {
         this.modelo = modelo;
         this.precio = precio;
-        this.androidVersion = androidVersion;
-        this.memoriaRam = memoriaRam;
+        this.android = android;
+        this.ram = ram;
         this.store = store;
         this.numeroChips = numeroChips;
         this.buildVersion = buildVersion;
@@ -29,32 +61,39 @@ public class Android implements ICelulara{
 
     @Override
     public void agregar() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("++++++++++++++ caracteristicas ++++++++++++++");
+        System.out.println("Modelo: "+getModelo());
+        System.out.println("Precio: "+getPrecio());
+        System.out.println("Versión de android: "+getAndroid());
+        System.out.println("Memoria RAM: " + getRam());
+        System.out.println("Store: "+getStore());
+        System.out.println("Número de chips: "+getNumeroChips());
+        System.out.println("Build Version: "+getBuildVersion());
     }
+
+   
 
     @Override
     public int getPrecio() {
-        // TODO Auto-generated method stub
-        return 0;
+        
+        return precio;
     }
 
     @Override
     public int getRam() {
-        // TODO Auto-generated method stub
-        return 0;
+        
+        return ram;
     }
 
     @Override
-    public void setRam() {
-        // TODO Auto-generated method stub
-        
+    public void setPrecio(int precio) {
+        this.precio= precio;
     }
 
     @Override
-    public void stePrecio() {
-        // TODO Auto-generated method stub
-        
+    public void setRam(int ram) {
+        this.ram= ram;
     }
+
     
 }

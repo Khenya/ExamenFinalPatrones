@@ -2,8 +2,8 @@ package examenfinal.e2;
 
 public interface ICelulara {
     int getPrecio();
-    void stePrecio();
+    void setPrecio(int precio);
     int getRam();
-    void setRam();
+    void setRam(int ram);
     void agregar();
 }
